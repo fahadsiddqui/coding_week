@@ -159,3 +159,61 @@ function getHours(){
     var res =   "Hours is "+hours+" Minutes is "+mins;
     document.getElementById('result_days').innerHTML = res;
 }
+function getArrReverse(){
+  
+  var text = document.getElementById('arr_rev').value;
+  var len = text.length;
+  var textar =[];
+  for (let i = len; i >= 0; i--) {
+      textar.push(text.charAt(i))    
+  }
+  var rev = textar.join('');
+  document.getElementById('result_arr_rev').innerHTML=rev;
+}
+function getLargerValue() 
+ {
+  var arr_num1 = parseFloat(document.getElementById("arr_num1").value);
+  var arr_num2 = parseFloat(document.getElementById("arr_num2").value);
+  var arr_num3 = parseFloat(document.getElementById("arr_num3").value);
+
+  var nums_arr =[arr_num1,arr_num2,arr_num3];
+  console.log(nums_arr);
+  var max_val = nums_arr[0] > nums_arr[2] ? nums_arr[0] : nums_arr[2];
+
+    document.getElementById("arr_res_num1").value = max_val;
+    document.getElementById("arr_res_num2").value = max_val;
+    document.getElementById("arr_res_num3").value= max_val;
+
+}
+
+function getKTH() 
+ {
+  var kth_num1 = parseFloat(document.getElementById("kth_num1").value);
+  var kth_num2 = parseFloat(document.getElementById("kth_num2").value);
+  var kth_num3 = parseFloat(document.getElementById("kth_num3").value);
+  var kth_num4 = parseFloat(document.getElementById("kth_num4").value);
+  var kth_num5 = parseFloat(document.getElementById("kth_num5").value);
+
+  var kth_res_num1 = parseFloat(document.getElementById("kth_res_num1").value);
+
+  var nums_arr =[kth_num1,kth_num2,kth_num3,kth_num4,kth_num5];
+  console.log(nums_arr);
+
+  for (let i = 0; i < kth_res_num1; i++) {
+    let max_index = i;
+    const tmp = nums_arr[i];
+
+    for (let j = i + 1; j < nums_arr.length; j++) {
+      if (nums_arr[j] > nums_arr[max_index]) {
+        max_index = j;
+      }
+    }
+
+    nums_arr[i] = nums_arr[max_index];
+    nums_arr[max_index] = tmp;
+  }
+
+  var res= nums_arr[kth_res_num1 - 1];
+  document.getElementById("kth_display").innerHTML = res;
+
+}

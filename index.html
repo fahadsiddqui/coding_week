@@ -255,11 +255,13 @@ Assigment
     
             <hr class="my-3">
             <div class="row">
-                <div class="col-md-12">
-                    <p>16. Write a JavaScript program to reverse the elements of a given array, you can not use Array.reverse() do it with loop.</p>
-                <br>
-                <button class="btn btn-primary" onclick="getArea()">Run Program</button>
-                </div>            
+                <p>16. Write a JavaScript program to reverse the elements of a given array, you can not use Array.reverse() do it with loop.</p>
+                <div class="col-md-4">
+                    <label>Text</label>
+                    <input type="text" class="form-control" id="arr_rev">
+                    <p id="result_arr_rev" class="font-weight-bold"></p>
+                <button class="btn btn-primary" onclick="getArrReverse()">Run Program</button>
+            </div>            
             </div>
 
                 <hr class="my-3">
@@ -268,8 +270,32 @@ Assigment
                     <p>
                         17. Write a JavaScript program to find the larger value between the first or last
                          and set all the other elements with that value. Display the new array.</p>
-                <br>
-                <button class="btn btn-primary" onclick="getArea()">Run Program</button>
+                         <div class="row">
+                            <div class="col-md-2">
+                                <input type="number" class="form-control" id="arr_num1">
+                            </div>
+                            <div class="col-md-2">
+                                <input type="number" class="form-control" id="arr_num2">
+                            </div>
+                            <div class="col-md-2">
+                                <input type="number" class="form-control" id="arr_num3">
+                            </div>
+                     </div>
+                     <br>
+                     <div class="row">
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="arr_res_num1" readonly>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="arr_res_num2" readonly>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="arr_res_num3" readonly>
+                        </div>
+                            </div>
+
+                        <br>
+                <button class="btn btn-primary" onclick="getLargerValue()">Run Program</button>
                 </div>            
             </div>
 
@@ -277,8 +303,32 @@ Assigment
             <div class="row">
                 <div class="col-md-12">
                     <p>18. Write a JavaScript program to find the kth greatest element of a given array of Numbers</p>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="kth_num1">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="kth_num2">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="kth_num3">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="kth_num4">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" id="kth_num5">
+                        </div>
+                 </div>
+                 <br>
+                 <div class="row">
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="kth_res_num1" >
+                    </div>
+                        </div>
+                                <p id="kth_display"></p>
                 <br>
-                <button class="btn btn-primary" onclick="getArea()">Run Program</button>
+                <button class="btn btn-primary" onclick="getKTH()">Run Program</button>
                 </div>            
             </div>
 
